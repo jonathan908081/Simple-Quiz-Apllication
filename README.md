@@ -20,3 +20,7 @@ A practical quiz application designed to help midwifery students in Uganda prepa
 
 - Web browser (Chrome, Firefox, Safari)
 - Internet connection
+### Installation
+1. Clone the repository:
+   ```bash
+   [git clone https://jonathan908081.github.io/Simple-Quiz-Apllication]
