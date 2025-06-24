@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4806bb5052.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>SAMPLE QNS || PRACTICAL</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <div class="nav__logo"><img src="./assets/logo.svg" alt="" /></div>
+        <div class="nav__list">
+          <div class="navigation__list">
+            <div class="close-btn" id="closeMenu">
+              <img src="./assets/close.png" alt="close btn" />
+            </div>
+            <div class="nav-header">Quiz Category</div>
+            <div class="category">
+              <div class="category__container">
+                <div class="cate-image">
+                  <img src="./assets/antental-care.jpg" alt="" />
+                </div>
+                <div class="cate-content">Antenatal Care</div>
+              </div>
+              <div class="category__container">
+                <div class="cate-image">
+                  <img src="./assets/Intrapartum-Care.jpg" alt="" />
+                </div>
+                <div class="cate-content">Intrapartum Care</div>
+              </div>
+              <div class="category__container">
+                <div class="cate-image">
+                  <img src="./assets/Postnatal.jpg" alt="" />
+                </div>
+                <div class="cate-content">Postnatal & Newborn Care</div>
+              </div>
+              <div class="category__container">
+                <div class="cate-image">
+                  <img src="./assets/other.jpg" alt="" />
+                </div>
+                <div class="cate-content">Others</div>
+              </div>
+            </div>
+            <button>LOGIN <img src="./assets/right-arrow.png" alt="" /></button>
+          </div>
+          <div class="dark__mode" id="darkMode">
+            <img src="./assets/moon.png" alt="" />
+          </div>
+          <div class="open__nav" id="openNav">
+            <img src="./assets/menu.svg" alt="nav-log" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="container">
+        <div class="left__section"></div>
+        <div class="right__section">
+          <div class="screen active" id="startScreen">
+            <h1>MIDWIFERY MASTERY: UGANDA PRACTICAL QUIZ CHALLENGE!</h1>
+            <p>
+              "Are you ready to prove you’ve got what it takes? Dive into
+              hands-on midwifery questions straight from the ward!"
+            </p>
+            <ul>
+              <li>50+ Real-World Scenarios</li>
+              <li>Master ANC, Delivery & Postnatal Care</li>
+              <li>Pass Your Exams with Confidence!</li>
+            </ul>
+
+            <button id="startScreenBtn">
+              NEXT <img src="./assets/right-arrow.png" alt="" />
+            </button>
+          </div>
+
+          <div class="screen" id="accountScreen">
+            <h1>QUIZ RULES: MIDWIFERY PRACTICAL CHALLENGE</h1>
+
+            <ul>
+              <li>
+                You’ll have 60 seconds per question (simulating real clinical
+                decision-making pressure).
+              </li>
+              <li>
+                This quiz tests real-world skills—approach it like a live
+                delivery!
+              </li>
+              <li>
+                Each question has ONE correct answer—choose the most clinically
+                accurate option.
+              </li>
+              <li>
+                Retake the quiz until you score 100% (because mothers and babies
+                deserve no less).
+              </li>
+            </ul>
+            <form>
+              <h2>Fill in your details!</h2>
+              <div class="form-wrapper">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    placeholder="Enter your Full Names"
+                    id="userName"
+                    onblur="validateUserName()"
+                  />
+                  <small></small>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    placeholder="Enter your email address"
+                    id="userEmail"
+                    onblur="validateUserEmail()"
+                  />
+                  <small></small>
+                </div>
+              </div>
+              <div class="submit__btn">
+                <button type="submit">
+                  START QUIZ <img src="./assets/right-arrow.png" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="screen" id="quizScreen">
+            <div id="questionText" class="question-text"></div>
+            <div class="question-number-container">
+              <div class="question">
+                <p>
+                  Question
+                  <span id="currentQuestionSpan" class="current-question-span"
+                    >5</span
+                  >
+                  of
+                  <span
+                    id="totalqUestionSpan"
+                    class="total-question-span"
+                  ></span>
+                </p>
+              </div>
+
+              <div class="score-container">
+                <p>Score: <span id="score">0</span></p>
+              </div>
+            </div>
+            <div id="answerContainer" class="answer-container"></div>
+            <div class="progres-bar">
+              <div id="progress" class="progress"></div>
+            </div>
+          </div>
+
+          <div class="screen" id="resultScreen">
+            <h1>Congragulations! <span id="usernameSpan"></span></h1>
+            <p>
+              Your haves successfully completed the quiz!. Your results have
+              been sent to
+              <span id="useremailSpan"></span>
+            </p>
+
+            <div class="restult-container">
+              <p>
+                <span id="resultScore"> 40 </span> /
+                <span id="maxScore"> 50</span>
+              </p>
+
+              <div class="result-message">
+                <p>
+                  <span id="resultMessage">You have given it your best</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="submit__btn">
+              <button id="restartQuiz">
+                RESTART QUIZ <img src="./assets/right-arrow.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
